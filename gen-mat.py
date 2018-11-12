@@ -14,6 +14,6 @@ if __name__ == '__main__':
     elif len(sys.argv)==3:
         n=int(sys.argv[1])
         m=int(sys.argv[2])
-    mat=scipy.sparse.rand(n, n, density=density, format="csr")
+    mat=scipy.sparse.rand(n, m, density=density, format="csr")
     scipy.sparse.save_npz('tmp.npz', mat)
 

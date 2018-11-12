@@ -2,7 +2,12 @@
 ## Delayed Sparse Matrix
 
 Efficient sparse matrix implementation for various "Principal Component Analysis".
-And demo usages of the efficient implementation for Correspondence Analysis(CA) and principal component analysis (PCA).
+And demo usages of the efficient implementation for 
+
+* Correspondence Analysis(CA) 
+* Principal Component Analysis (PCA)
+* Canonical Correlation Analysis (CCA)
+
 
 To compare with existing methods, you can execute demo.sh.
 ```sh
@@ -55,16 +60,21 @@ In order to execute demo.sh, you need install /usr/bin/time and orange library
 
 ## License
 
-Author: Hirotaka Niitsuma.
-
 @2018 Hirotaka Niirtsuma.
+
 
 You can use these codes olny for self evaluation.
 Cannot use these codes for commercial and academical use.
 
--  pantent pending
- - https://patentscope2.wipo.int/search/ja/detail.jsf?docId=JP225380312
- - Japan patent office:patent number 2017-007741
+* pantent pending
+  * https://patentscope2.wipo.int/search/ja/detail.jsf?docId=JP225380312
+  * Japan patent office:patent number 2017-007741
 
 
+
+## Author
+Hirotaka Niitsuma.
+
+
+@2018 Hirotaka Niirtsuma.
 

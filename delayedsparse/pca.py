@@ -140,7 +140,8 @@ if __name__ == '__main__':
 
     import sklearn.decomposition
  
-    if len(sys.argv)==2:
+    if len(sys.argv)==3:
+        
         X = scipy.sparse.load_npz('tmp.npz')
         dim=min(10,X.shape[1])
         if sys.argv[1] == 'delay':
