@@ -1,20 +1,23 @@
 #!/bin/bash
 
+pip3 install -U delayedsparse --user 
+
 echo "PCA"
 for SIZE in 1000 4000 ;do
     echo "======================";
 
     echo "matrix size=" $SIZE;
-    python3 gen-mat.py $SIZE  
+    python3 examples/gen-mat.py $SIZE  
 
-    echo "------";
-    /usr/bin/time -f "%M KB %E s" python3 delayedsparse/pca.py delay
+    echo "------delayed sparse";
+    
+    /usr/bin/time -f "%M KB %E s" python3 examples/pca-demo.py delay
 
-    echo "------";
-    /usr/bin/time -f "%M KB %E s" python3 delayedsparse/pca.py sklearn
+    echo "------ sklearn ";
+    /usr/bin/time -f "%M KB %E s" python3 examples/pca-demo.py sklearn
 
-    echo "------";
-    /usr/bin/time -f "%M KB %E s" python3 delayedsparse/pca.py randmomized
+    echo "------ randomized svd";
+    /usr/bin/time -f "%M KB %E s" python3 examples/pca-demo.py randmomized
 
 
 done

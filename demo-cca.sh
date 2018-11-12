@@ -5,15 +5,15 @@ for SIZE in 300 ;do
     echo "======================";
 
     echo "size=" $SIZE
-    python3 gen-mat.py 2000 $SIZE
+    python3 examples/gen-mat.py 2000 $SIZE
     mv tmp.npz tmp2.npz
-    python3 gen-mat.py 2000 $SIZE 
+    python3 examples/gen-mat.py 2000 $SIZE 
 
     echo "------";
-    /usr/bin/time -f "%M KB %E s" python3 delayedsparse/cca.py delay 
+    /usr/bin/time -f "%M KB %E s" python3 examples/cca-demo.py delay 
 
     echo "------";
-    /usr/bin/time -f "%M KB %E s" python3 delayedsparse/cca.py sklearn
+    /usr/bin/time -f "%M KB %E s" python3 examples/cca-demo.py sklearn
 
 
 
