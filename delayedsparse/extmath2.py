@@ -26,8 +26,8 @@ from scipy import linalg
 from scipy.sparse import issparse, csr_matrix
 
 
-from delayedsparse import isdelayedsparse,delayedspmatrix
-from delayedsparse import safe_sparse_dot
+from .delayedsparse import isdelayedsparse,delayedspmatrix
+from .delayedsparse import safe_sparse_dot
 
 from sklearn.utils import check_random_state
 from sklearn.utils.fixes import np_version

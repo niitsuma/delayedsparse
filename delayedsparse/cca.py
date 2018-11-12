@@ -21,10 +21,10 @@ import scipy.sparse
 from sklearn import base
 from sklearn import utils
 
-from delayedsparse import delayedspmatrix,delayedspmatrix_t,isdelayedspmatrix
-from delayedsparse import safe_sparse_dot as sdot
+from .delayedsparse import delayedspmatrix,delayedspmatrix_t,isdelayedspmatrix
+from .delayedsparse import safe_sparse_dot as sdot
 
-import extmath2
+from . import extmath2
 
 class CCA(base.BaseEstimator, base.TransformerMixin):
     def __init__(self, n_components=2):

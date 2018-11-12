@@ -58,6 +58,7 @@ setup(
     license='You can use these codes olny for self evaluation. Cannot use these codes for commercial and academical use.',
     python_requires=REQUIRES_PYTHON,
     url=URL,
+    packages=find_packages(exclude=('examples','tests',)),
     package_data = {'': ['LICENSE']},
     install_requires=REQUIRED,
     classifiers=[

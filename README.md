@@ -11,6 +11,8 @@ And demo usages of the efficient implementation for
 
 To compare with existing methods, you can execute demo.sh.
 ```sh
+>>> git clone https://github.com/niitsuma/delayedsparse
+>>> cd delayedsparse
 >>> bash  demo.sh
 ```
 
@@ -43,6 +45,41 @@ https://github.com/MaxHalford/prince
 >>> pip install git+https://github.com/niitsuma/delayedsparse 
 ```
 
+## Usage
+
+### Principal component analysis (PCA)
+
+```python
+>>> import delayedsparse
+>>> import scipy.sparse
+>>> X=scipy.sparse.rand(1000, 300, density=0.3, format="csr")
+>>> pca=delayedsparse.PCA(n_components=3)
+>>> pca.fit(X)
+>>> Xmaped=pca.transform(X)
+```
+
+### Correspondence Analysis (CA)
+
+```python
+>>> import delayedsparse
+>>> import scipy.sparse
+>>> X=scipy.sparse.rand(400, 400, density=0.3, format="csr")
+>>> ca=delayedsparse.CA(n_components=3)
+>>> ca.fit(X)
+>>> print(ca.F*1)
+```
+
+### Canonical Correlation Analysis (CCA)
+
+```python
+>>> import delayedsparse
+>>> import scipy.sparse
+>>> X=scipy.sparse.rand(1000, 100, density=0.3, format="csr")
+>>> Y=scipy.sparse.rand(1000, 100, density=0.3, format="csr")
+>>> cca=delayedsparse.CCA(n_components=3)
+>>> cca.fit(X,Y)
+>>> Xmaped,Ymapped=cca.transform(X,Y)
+```
 
 ## Requirements
 
